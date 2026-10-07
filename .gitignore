@@ -1,0 +1,19 @@
+# Large datasets and generated outputs
+/data/
+/results/
+/UniOP/
+
+# Python temporary files
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# macOS files
+.DS_Store
+
+# Logs
+*.log
+
+# Backup scripts
+*.backup
+*-backup.py
