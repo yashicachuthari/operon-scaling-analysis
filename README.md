@@ -53,3 +53,45 @@ https://github.com/hongsua/UniOP
 The operon scaling analysis and research-specific pipeline
 are being developed by Yashica Chuthari under the
 mentorship of Professor Rohan Maddamsetti.
+
+## Reproducing the R Figure
+
+### Requirements
+
+- R 4.6.1
+- tidyverse (including ggplot2)
+
+### Install R packages
+
+Run:
+
+R -e 'install.packages("tidyverse", repos="https://cloud.r-project.org")'
+
+### Generate the figure
+
+From the repository's root directory, run:
+
+Rscript src/plot-operon-scaling.R
+
+The script reads:
+
+processed_data/operon_scaling_results.csv
+
+It generates:
+
+- results/figures/operon_scaling_R.png
+- results/figures/operon_scaling_R.pdf
+
+The processed dataset contains 60,934 bacterial replicons,
+including 17,444 chromosomes and 43,490 plasmids.
+
+Missing operon counts are treated as zero for plotting.
+Replicons with missing or nonpositive lengths are excluded.
+
+### Raw Data and Analysis
+
+Genome annotations were obtained from NCBI RefSeq.
+Operon predictions were generated using UniOP.
+
+The complete genome-processing workflow and independent
+validation procedures are still being documented.
