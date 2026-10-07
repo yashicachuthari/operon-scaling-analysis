@@ -1,6 +1,6 @@
 library(tidyverse)
 
-input_file <- "results/uniop-all/operon_scaling_results.csv"
+input_file <- "processed_data/operon_scaling_results.csv"
 output_dir <- "results/figures"
 
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
